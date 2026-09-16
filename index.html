@@ -1,0 +1,304 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrinox - Parafusos Inox & Peças Navais</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-blue: #0284c7;
+            --accent-hover: #0369a1;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: rgba(2, 132, 199, 0.15);
+            color: #38bdf8;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto 24px auto;
+        }
+
+        .btn-main {
+            display: inline-block;
+            background-color: var(--accent-blue);
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4);
+        }
+
+        .btn-main:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Seções Gerais */
+        section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+
+        section h2 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent-blue);
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+
+        /* Grid de Serviços */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .service-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 12px;
+            transition: border 0.2s;
+        }
+
+        .service-card:hover {
+            border-color: var(--accent-blue);
+        }
+
+        .service-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #38bdf8;
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Grid de Informações */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px 24px;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-item span.label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-item span.value {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        /* Contato e Endereço */
+        .contact-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(2, 132, 199, 0.05);
+            border: 1px solid rgba(2, 132, 199, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .contact-info a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.6rem; }
+            section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header Principal -->
+    <header>
+        <span class="tag">Desde 1990 • Alta Precisão</span>
+        <h1>Patrinox Artefatos</h1>
+        <p class="subtitle">Especialistas em parafusos de aço inox, fixadores industriais e peças navais de alta resistência.</p>
+        <a href="https://patrinoxparafusos.com.br/" target="_blank" rel="noopener" class="btn-main">Acessar Site Oficial →</a>
+    </header>
+
+    <!-- Principais Serviços/Produtos -->
+    <section>
+        <h2>Nossas Soluções</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Parafusos em Inox</h3>
+                <p>Linha completa de fixadores resistentes à corrosão para diversas aplicações.</p>
+            </div>
+            <div class="service-card">
+                <h3>Peças Navais</h3>
+                <p>Componentes sob medida para suportar ambientes marinhos e severos.</p>
+            </div>
+            <div class="service-card">
+                <h3>Artefatos Especiais</h3>
+                <p>Desenvolvimento e fornecimento de peças táticas e industriais sob demanda.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informações da Empresa -->
+    <section>
+        <h2>Informações do Registro</h2>
+        <div class="info-grid">
+            <div class="info-item">
+                <span class="label">Razão Social</span>
+                <span class="value">Patrinox Artefatos Parafusos Inox e Pecas Navais LTDA</span>
+            </div>
+            <div class="info-item">
+                <span class="label">CNPJ</span>
+                <span class="value">36.221.414/0001-98</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Inscrição Estadual (RJ)</span>
+                <span class="value">84.038.63-6</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Situação Cadastral</span>
+                <span class="value" style="color: #4ade80;">Ativa (desde 26/02/2005)</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Data de Abertura</span>
+                <span class="value">31/07/1990 (36 anos)</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Porte</span>
+                <span class="value">Micro Empresa</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Natureza Jurídica</span>
+                <span class="value">Sociedade Empresária Limitada</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Regime</span>
+                <span class="value">Simples Nacional (desde 01/07/2007)</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Capital Social</span>
+                <span class="value">R$ 104.500,00</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Tipo</span>
+                <span class="value">Matriz</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização e Contato -->
+    <section>
+        <h2>Contato e Localização</h2>
+        <div class="contact-box">
+            <div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase;">Atendimento Telefônico</p>
+                <div class="contact-info">
+                    <a href="tel:2125915184">(21) 2591-5184</a>
+                </div>
+            </div>
+            <a href="https://patrinoxparafusos.com.br/" target="_blank" rel="noopener" class="btn-main" style="padding: 10px 20px; font-size: 0.9rem;">Visitar Catalogo</a>
+        </div>
+
+        <div style="margin-top: 24px;">
+            <p><strong>Endereço:</strong> Rua Padre Telemaco, 25 - Loja A / B</p>
+            <p><strong>Bairro:</strong> Cascadura — Rio de Janeiro / RJ</p>
+            <p><strong>CEP:</strong> 21311-050</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© Patrinox Artefatos Parafusos Inox e Pecas Navais LTDA — Todos os direitos reservados.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
